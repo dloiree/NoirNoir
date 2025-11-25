@@ -27,53 +27,72 @@ body {
 /* =========================================================
    NAVBAR
 ========================================================= */
+/* NAVBAR */
 .navbar {
     width: 100%;
-    padding: 20px 60px;
+    padding: 15px 25px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
+    justify-content: space-between;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 10;
-
-    animation: fadeDown 1.2s ease forwards;
-    opacity: 0;
 }
 
-@keyframes fadeDown {
-    0% { transform: translateY(-40px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+.brand {
+    display: flex;
+    align-items: center; /* biar logo dan judul sejajar vertikal */
 }
 
 .logo {
-    width: 50px;
-    margin-right: 10px;
+    width: 45px;
+    height: auto;
 }
 
 .judul {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
+    margin-left: 10px;
 }
 
+/* NAV LINKS DESKTOP */
 .nav-links {
-    display: flex;
-    gap: 30px;
     list-style: none;
-    margin-left: auto;
+    display: flex;
+    gap: 25px;
 }
 
 .nav-links li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
+}
+
+/* HAMBURGER MENU (MOBILE ONLY) */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* NAV MOBILE DROPDOWN */
+.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-links.active li {
+    margin: 15px 0;
 }
 
 /* =========================================================
@@ -385,5 +404,6 @@ copyright {
         padding: 10px;
     }
 }
+
 
 
