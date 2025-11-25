@@ -9,22 +9,26 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
+        <div class="brand">
         <img src="logo 12 no bg.png" alt="" class="logo">
         <div class="judul">SMPN 12 Tangerang</div>
+        </div>
 
-        <!-- Tombol Hamburger (muncul di mobile saja) -->
-        <div class="hamburger" onclick="toggleMenu()">
+        <!-- HAMBURGER MENU -->
+        <div class="menu-toggle" id="menuToggle">
             <i class="fas fa-bars"></i>
         </div>
-        
-        <ul class="nav-links">
+
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Beranda</a></li>
             <li><a href="profil.html">Profil</a></li>
             <li><a href="visi misi.html">Visi Misi</a></li>
             <li><a href="guru.html">Guru</a></li>
         </ul>
     </nav>
+    
     <!-- HERO SECTION -->
     <header class="hero">
         <div class="overlay"></div>
@@ -111,4 +115,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
