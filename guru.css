@@ -295,13 +295,38 @@ copyright {
     opacity: 0.8;
 }
 
-/* Untuk layar mobile (max-width 768px) */
-/* Untuk layar mobile (max-width 768px) */
+/* Media query untuk layar dengan lebar maksimum 768px (tablet & mobile) */
 @media screen and (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* ubah jadi 1 kolom */
-        gap: 15px; /* jarak antar card */
+    .about {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
-    /* Tidak perlu ubah .card, .foto, atau .info */
+
+    .grid-container {
+        grid-template-columns: 1fr; /* ubah grid menjadi 1 kolom */
+        gap: 15px; /* jarak antar card bisa diperkecil */
+    }
+
+    .card {
+        flex-direction: column; /* agar foto di atas dan info di bawah */
+        align-items: center; /* center konten */
+        text-align: center; 
+    }
+
+    .foto {
+        margin-right: 0;
+        margin-bottom: 10px; /* beri jarak bawah foto */
+        width: 100%; /* bisa disesuaikan */
+        max-width: 200px;
+    }
+
+    .info p,
+    .info b {
+        text-align: center;
+    }
 }
+
+
 
